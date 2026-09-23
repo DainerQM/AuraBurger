@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171513" />
+  <title>AuraBurger | Hamburguesas artesanales</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div id="welcomeModal" class="modal-layer active" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <div class="welcome-card">
+      <span class="eyebrow">AURABURGER</span>
+      <div class="hero-burger" aria-hidden="true">🍔</div>
+      <h1 id="welcomeTitle">Bienvenido a AuraBurger</h1>
+      <p>Las mejores hamburguesas artesanales, hechas para ti.</p>
+      <button class="btn btn-primary" data-close-welcome>Ver menú <span>→</span></button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#menu" aria-label="AuraBurger inicio"><span class="brand-mark">A</span><span>Aura<span>Burger</span></span></a>
+    <button id="cartButton" class="cart-button" aria-label="Abrir carrito">🛒 <span>Pedido</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main id="menu" class="page-shell">
+    <section class="hero-section">
+      <div><span class="eyebrow">SABOR QUE SE SIENTE</span><h2>Hechas con actitud.<br><em>Comidas con aura.</em></h2><p>Pan brioche, ingredientes frescos y mucho amor en cada mordida.</p></div>
+      <div class="hero-art" aria-label="Hamburguesa AuraBurger" role="img"><span>🍔</span><i>★</i><i>★</i><i>★</i></div>
+    </section>
+    <div class="section-heading"><div><span class="eyebrow">NUESTRO MENÚ</span><h3>Elige tu favorita</h3></div><span class="order-note">Preparadas al momento · 20-30 min</span></div>
+    <section id="productGrid" class="product-grid" aria-live="polite"></section>
+  </main>
+
+  <div id="customizeModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="customizeTitle">
+    <div class="dialog-card"><button class="icon-close" data-close="customizeModal" aria-label="Cerrar">×</button><div id="customizeContent"></div></div>
+  </div>
+
+  <aside id="cartDrawer" class="drawer" aria-labelledby="cartTitle"><div class="drawer-header"><div><span class="eyebrow">TU PEDIDO</span><h2 id="cartTitle">Carrito</h2></div><button class="icon-close" data-close="cartDrawer" aria-label="Cerrar carrito">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div class="total-row"><span>Total</span><strong id="cartTotal">$0</strong></div><button id="checkoutButton" class="btn btn-primary full">Continuar <span>→</span></button></div></aside>
+
+  <div id="checkoutModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="dialog-card checkout-card"><button class="icon-close" data-close="checkoutModal" aria-label="Cerrar">×</button><div class="step-label">PASO <b id="stepNumber">1</b> DE 2</div><div id="checkoutContent"></div></div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script1.js"></script>
+</body>
+</html>
